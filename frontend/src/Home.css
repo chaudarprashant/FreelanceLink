@@ -1,0 +1,78 @@
+/* Home.css */
+
+/* Hero Section */
+.hero-section {
+  background: linear-gradient(135deg, #0f0f0f, #1a1a1a);
+  color: white;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+.section-spacing {
+  padding: 60px 20px;
+  margin: 60px 0;
+}
+
+
+.hero-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at top left, rgba(0, 255, 255, 0.1), transparent),
+              radial-gradient(circle at bottom right, rgba(255, 0, 255, 0.1), transparent);
+  z-index: 0;
+}
+
+.hero-section .container {
+  position: relative;
+  z-index: 1;
+}
+
+/* Reusable Dark Section */
+.section-dark {
+  background: linear-gradient(135deg, #0f0f0f, #1a1a1a);
+  color: white;
+  position: relative;
+  overflow: hidden;
+  padding: 60px 0;
+}
+
+.section-dark::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at top left, rgba(0, 255, 255, 0.05), transparent),
+              radial-gradient(circle at bottom right, rgba(255, 0, 255, 0.05), transparent);
+  z-index: 0;
+}
+
+.section-dark .container {
+  position: relative;
+  z-index: 1;
+}
+
+/* Accent CTA Section */
+.section-accent {
+  background: linear-gradient(135deg, #1a1a1a, #00bcd4);
+  color: white;
+  padding: 60px 0;
+  text-align: center;
+}
+
+/* Glass Card */
+.glass-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #fff;
+  padding: 20px;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.05);
+  transition: all 0.3s ease-in-out;
+}
+
+.glass-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 30px rgba(0, 255, 255, 0.15);
+}

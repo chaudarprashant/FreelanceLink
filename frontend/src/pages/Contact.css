@@ -1,0 +1,70 @@
+/* Page Background */
+.contact-page {
+  background: linear-gradient(135deg, #0f0f0f, #1a1a1a);
+  min-height: 100vh;
+  padding: 60px 20px;
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Decorative Overlay */
+.contact-page::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at top left, rgba(0, 255, 255, 0.08), transparent),
+              radial-gradient(circle at bottom right, rgba(255, 0, 255, 0.08), transparent);
+  z-index: 0;
+}
+
+/* Card Styling */
+.contact-card {
+  position: relative;
+  z-index: 1;
+  max-width: 600px;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 40px 30px;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.05);
+  color: white;
+}
+
+.contact-card h1 {
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.contact-card p {
+  color: #cccccc;
+  margin-bottom: 20px;
+}
+
+.contact-card .form-label {
+  color: #dddddd;
+}
+
+.contact-card .form-control {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+}
+
+.contact-card .form-control::placeholder {
+  color: #cccccc;
+}
+
+.contact-card .btn-primary {
+  background-color: #00bcd4;
+  border: none;
+  font-weight: bold;
+}
+
+.contact-card .btn-primary:hover {
+  background-color: #0097a7;
+}

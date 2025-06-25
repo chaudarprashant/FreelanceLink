@@ -1,0 +1,55 @@
+/* Main Page Styling */
+.about-page {
+  background: linear-gradient(135deg, #0f0f0f, #1a1a1a);
+  min-height: 100vh;
+  padding: 60px 20px;
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: auto; /* ✅ enables scrolling if content is taller than screen */
+}
+
+/* Background Overlay */
+.about-page::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at top left, rgba(0, 255, 255, 0.08), transparent),
+              radial-gradient(circle at bottom right, rgba(255, 0, 255, 0.08), transparent);
+  z-index: 0;
+}
+
+/* Main Container */
+.about-container {
+  position: relative;
+  z-index: 1;
+  max-width: 960px;
+  margin: auto;
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 40px 30px;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.05);
+  color: white;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+/* Typography */
+.about-container h1,
+.about-container h2 {
+  color: #ffffff;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.about-container p,
+.about-container li {
+  color: #dddddd;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 12px;
+}
+
+.about-container ul {
+  padding-left: 1.5rem;
+}
