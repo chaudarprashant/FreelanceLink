@@ -25,6 +25,7 @@ function Login() {
 
             // Redirect based on role
             if (data.role === "admin") {
+                
                 navigate("/admin");  // Redirect to admin page
             } else {
                 navigate("/home");  // Redirect normal users to home

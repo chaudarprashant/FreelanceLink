@@ -5,6 +5,7 @@ import dotenv from 'dotenv';
 import authRoutes from "./routes/auth.js"; // Ensure .js extension
 import serviceProviderRoutes from "./routes/serviceProviderRoutes.js";
 import connectDB from "./config/db.js";
+import quoteRoutes from "./routes/quoteRoutes.js";
 
 
 dotenv.config();
@@ -23,10 +24,14 @@ app.use((req, res, next) => {
 // Connect to Database
 connectDB();
 
+// Static file serving for uploaded files
+app.use("/uploads", express.static("uploads"));
+
 // Routes
 app.use("/api/auth", authRoutes);
 app.use("/api/service-provider", serviceProviderRoutes);
 app.get("/", (req, res) => res.send("API is working"));
+app.use("/api/quotes", quoteRoutes); // ✅ Register Quote Routes
 
 
 // Start Server

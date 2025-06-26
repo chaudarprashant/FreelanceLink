@@ -25,7 +25,9 @@ const ContactSP = () => {
     const fetchProvider = async () => {
       try {
         const res = await axios.get(`/api/service-provider/service-provider/${id}`);
+        console.log("Fetched provider data:", res.data); 
         setProvider(res.data);
+         console.log("Fetched provider ID:", res.data._id);
       } catch (err) {
         console.error("Failed to load provider", err);
       } finally {
@@ -194,6 +196,9 @@ const ContactSP = () => {
 {showPanel && (
   <FloatingContactPanel
     onClose={() => setShowPanel(false)}
+    userId={user?._id}
+    // serviceProviderId={provider?._id}
+     serviceProviderId={provider.userId?._id}
     phone={provider.phone} // ✅ pass phone number here
   />
 )}

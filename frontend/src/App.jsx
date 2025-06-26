@@ -10,6 +10,7 @@ import AdminDashboard from './pages/Admin/AdminDashboard';
 import ServiceProvidersList from './pages/ServiceProvidersList';
 import ContactSP from './pages/ContactSP';
 import Home from './Home';
+import NewWorks from './pages/Admin/NewWork';
 
 const App = () => {
   return (
@@ -25,6 +26,7 @@ const App = () => {
     <Route path="/admin" element={<AdminDashboard/>} />
     <Route path="/service-providers/:category" element={<ServiceProvidersList />} />
     <Route path="/service-provider/:id" element={<ContactSP/>} />
+    <Route path="/service-provider/new-work" element={<NewWorks />} />
 
 
     </Routes>
