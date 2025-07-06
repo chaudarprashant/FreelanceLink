@@ -13,7 +13,7 @@ const Home = () => {
 useEffect(() => {
   const fetchProjects = async () => {
     try {
-      const res = await axios.get('http://localhost:5000/api/projects/top');
+      const res = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/api/projects/top`);
       setTopProjects(res.data);
     } catch (err) {
       console.error('Failed to fetch top projects:', err);

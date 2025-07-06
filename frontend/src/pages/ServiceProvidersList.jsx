@@ -10,7 +10,7 @@ const ServiceProvidersList = () => {
   useEffect(() => {
     const fetchServiceProviders = async () => {
       try {
-        const response = await axios.get(`http://localhost:5000/api/service-provider/filter?category=${category}`);
+        const response = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/api/service-provider/filter?category=${category}`);
         setServiceProviders(response.data);
       } catch (error) {
         console.error("Error fetching service providers:", error);
