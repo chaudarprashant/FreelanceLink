@@ -15,11 +15,17 @@ const app = express();
 // Middleware
 app.use(express.json());
 // app.use(cors({ origin: process.env.CLIENT_URL || "*" })); // Restrict CORS for security
+// app.use(cors({
+//   origin: "https://freelancelink.onrender.com", // or "*" for all
+//   credentials: true,
+// }));
 app.use(cors({
-  origin: "https://freelancelink.onrender.com", // or "*" for all
-  credentials: true,
+  origin: [
+    "http://localhost:5000",                         // local dev
+    "https://freelancelink.onrender.com"    // deployed frontend (if any)
+  ],
+  credentials: true
 }));
-
 
 app.use((req, res, next) => {
     console.log(`${req.method} ${req.url}`);
