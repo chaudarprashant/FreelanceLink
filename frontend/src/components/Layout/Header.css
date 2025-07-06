@@ -1,6 +1,8 @@
 .custom-navbar {
-  background: linear-gradient(135deg, #1f1c2c, #928dab);
-  color: #fff;
+background: linear-gradient(90deg, #e6f4fa, #c8e6f9);
+color: #0f1f3d;
+box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+
   padding: 0.8rem 2rem;
   z-index: 1000;
 }
@@ -8,23 +10,23 @@
 .custom-navbar .navbar-brand {
   font-weight: bold;
   font-size: 1.5rem;
-  color: #fff !important;
+  color: #090707 !important;
 }
 
 .custom-navbar .nav-link,
 .custom-navbar .dropdown-toggle,
 .custom-navbar .dropdown-item {
-  color: #f1f1f1 !important;
+  color: #1a1414 !important;
   transition: color 0.3s ease;
 }
 
 .custom-navbar .nav-link:hover,
 .custom-navbar .dropdown-item:hover {
-  color: #ffd700 !important;
+  color: #4116b7 !important;
 }
 
 .custom-navbar .dropdown-menu {
-  background-color: #2e2c3a;
+  background-color: #90bcde;
   border: none;
   box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
 }

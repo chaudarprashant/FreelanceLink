@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import FloatingContactPanel from "./FloatingContactPanel"; 
+import FloatingPaymentPanel from "./FloatingPaymentPanel";
 
 const ContactSP = () => {
   const { id } = useParams();
@@ -9,6 +10,7 @@ const ContactSP = () => {
   const [loading, setLoading] = useState(true);
   const [message, setMessage] = useState("");
   const [showPanel, setShowPanel] = useState(false);
+const [showPaymentPanel, setShowPaymentPanel] = useState(false);
 
   const storedUser = localStorage.getItem("user");
   let user = null;
@@ -134,9 +136,15 @@ const ContactSP = () => {
         </li>
       )}
     </ul>
+
   </div>
 )}
 
+<div className="text-center mt-4 mb-3">
+  <button className="btn btn-outline-primary" onClick={() => setShowPaymentPanel(true)}>
+    💳 Make Payment
+  </button>
+</div>
 
           
 
@@ -210,6 +218,17 @@ const ContactSP = () => {
 
         </div>
       </div>
+
+
+      {showPaymentPanel && (
+  <FloatingPaymentPanel
+    onClose={() => setShowPaymentPanel(false)}
+    pricing={provider.pricing}
+    user={user}
+    provider={provider}
+  />
+)}
+
     </div>
   );
 };

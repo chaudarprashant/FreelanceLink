@@ -26,17 +26,17 @@ const Header = () => {
 
   const handleLogout = () => {
     localStorage.removeItem('user');
-
+    localStorage.clear();
     // Trigger custom event to update nav state
     window.dispatchEvent(new Event('authChanged'));
 
-    navigate('/');
+    navigate('/login');
   };
 
   return (
     <nav className="navbar navbar-expand-lg custom-navbar shadow-lg">
       <div className="container-fluid">
-        <NavLink className="navbar-brand pl-8 ms-5" to="/">FreelanceLink</NavLink>
+        <NavLink className="navbar-brand pl-8 ms-" to="/">FreelanceLink</NavLink>
         <button
           className="navbar-toggler"
           type="button"

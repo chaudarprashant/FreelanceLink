@@ -93,6 +93,7 @@ const FloatingContactPanel = ({ onClose, phone, serviceProviderId, userId }) => 
               onChange={(e) => setMinDays(e.target.value)}
               required
             />
+            <label className="form-label">Upload Payment ScreenShot,Project Prototype and files : </label>
             <input
               type="file"
               className="form-control mb-3"

@@ -2,6 +2,7 @@
 import { useState } from "react";
 import axios from "axios";
 import { NavLink, useNavigate } from "react-router-dom";
+import Layout from "../../components/Layout/Layout";
 
 function SignUp() {
     const [form, setForm] = useState({ name: "", email: "", password: "", role: "user" });
@@ -24,7 +25,8 @@ function SignUp() {
 
     return (
      
-          <div className="container mt-5">
+         <Layout>
+             <div className="container mt-5 mb-5">
             <div className="row justify-content-center">
                 <div className="col-md-6">
                     <div className="card shadow p-4">
@@ -62,6 +64,7 @@ function SignUp() {
                 </div>
             </div>
         </div>
+         </Layout>
      
     );
 }

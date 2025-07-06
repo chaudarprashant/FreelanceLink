@@ -2,6 +2,7 @@
 import { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import Layout from "../../components/Layout/Layout";
 
 function Login() {
     const [form, setForm] = useState({ email: "", password: "" });
@@ -18,7 +19,7 @@ function Login() {
             localStorage.setItem("token", data.token);
             localStorage.setItem("role", data.role);
             console.log("User object:", data.user);
-
+            localStorage.setItem("isLoggedIn", "true");
             localStorage.setItem("user", JSON.stringify(data.user)); // 👈 Add this line
 
             alert("Login successful!");
@@ -36,7 +37,8 @@ function Login() {
     };
 
     return (
-        <div className="container d-flex justify-content-center align-items-center vh-100">
+        <Layout>
+            <div className="container d-flex justify-content-center align-items-center vh-100">
             <div className="card p-4 shadow-lg" style={{ width: "400px" }}>
                 <h2 className="text-center mb-4">Login</h2>
                 <form onSubmit={handleSubmit}>
@@ -66,6 +68,7 @@ function Login() {
                 </form>
             </div>
         </div>
+        </Layout>
     );
 }
 

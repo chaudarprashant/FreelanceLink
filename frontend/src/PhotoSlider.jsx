@@ -14,7 +14,7 @@ const images = [
 
 const ImageSlider = () => {
   return (
-    <div className="w-full flex justify-center mt-10">
+    <div className="w-full flex justify-center mt-10 me-5">
       <Swiper
         modules={[Autoplay, EffectFade, Zoom]}
         effect="fade"

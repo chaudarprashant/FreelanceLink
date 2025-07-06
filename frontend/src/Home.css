@@ -2,26 +2,26 @@
 
 /* Hero Section */
 .hero-section {
-  background: linear-gradient(135deg, #0f0f0f, #1a1a1a);
-  color: white;
+  background: linear-gradient(135deg, #ffffff, #9de0f4); /* white to soft sky blue */
+  color: #000; /* black text for contrast */
   min-height: 90vh;
   display: flex;
   align-items: center;
   position: relative;
   overflow: hidden;
 }
+
 .section-spacing {
   padding: 60px 20px;
   margin: 60px 0;
 }
 
-
 .hero-section::before {
   content: '';
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at top left, rgba(0, 255, 255, 0.1), transparent),
-              radial-gradient(circle at bottom right, rgba(255, 0, 255, 0.1), transparent);
+  background: radial-gradient(circle at top left, rgba(0, 123, 255, 0.1), transparent),
+              radial-gradient(circle at bottom right, rgba(0, 191, 255, 0.1), transparent);
   z-index: 0;
 }
 
@@ -30,10 +30,10 @@
   z-index: 1;
 }
 
-/* Reusable Dark Section */
+/* Reusable Light Section */
 .section-dark {
-  background: linear-gradient(135deg, #0f0f0f, #1a1a1a);
-  color: white;
+  background: linear-gradient(135deg, #96d2f0, #ffffff); /* reverse blend */
+  color: #000;
   position: relative;
   overflow: hidden;
   padding: 60px 0;
@@ -43,8 +43,8 @@
   content: '';
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at top left, rgba(0, 255, 255, 0.05), transparent),
-              radial-gradient(circle at bottom right, rgba(255, 0, 255, 0.05), transparent);
+  background: radial-gradient(circle at top left, rgba(0, 123, 255, 0.05), transparent),
+              radial-gradient(circle at bottom right, rgba(0, 191, 255, 0.05), transparent);
   z-index: 0;
 }
 
@@ -55,24 +55,54 @@
 
 /* Accent CTA Section */
 .section-accent {
-  background: linear-gradient(135deg, #1a1a1a, #00bcd4);
-  color: white;
+  background: linear-gradient(135deg, #ffffff, #96d2f0);
+  color: #000;
   padding: 60px 0;
   text-align: center;
 }
 
 /* Glass Card */
 .glass-card {
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(255, 255, 255, 0.25);
   border-radius: 12px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  color: #000;
   padding: 20px;
-  box-shadow: 0 0 20px rgba(0, 255, 255, 0.05);
+  box-shadow: 0 0 20px rgba(150, 210, 240, 0.1);
   transition: all 0.3s ease-in-out;
 }
 
 .glass-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 0 30px rgba(0, 255, 255, 0.15);
+  box-shadow: 0 0 30px rgba(150, 210, 240, 0.3);
+}
+
+
+/* //what people say section style */
+
+.chat-bubble {
+  background: rgba(255, 255, 255, 0.07);
+  border-left: 4px solid #2f2c2c;
+  padding: 20px;
+  border-radius: 16px;
+  position: relative;
+  color: rgb(0, 0, 0);
+  transition: transform 0.3s ease;
+}
+
+.chat-bubble:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+.chat-bubble::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 20px;
+  width: 0;
+  height: 0;
+  border-top: 12px solid transparent;
+  border-bottom: 12px solid transparent;
+  border-right: 12px solid #168b39;
 }

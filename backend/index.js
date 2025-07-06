@@ -6,7 +6,7 @@ import authRoutes from "./routes/auth.js"; // Ensure .js extension
 import serviceProviderRoutes from "./routes/serviceProviderRoutes.js";
 import connectDB from "./config/db.js";
 import quoteRoutes from "./routes/quoteRoutes.js";
-
+import projectRoutes from './routes/projectRoutes.js'
 
 dotenv.config();
 const app = express();
@@ -32,7 +32,7 @@ app.use("/api/auth", authRoutes);
 app.use("/api/service-provider", serviceProviderRoutes);
 app.get("/", (req, res) => res.send("API is working"));
 app.use("/api/quotes", quoteRoutes); // ✅ Register Quote Routes
-
+app.use('/api/projects', projectRoutes)
 
 // Start Server
 const PORT = process.env.PORT || 5000;

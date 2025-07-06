@@ -2,6 +2,7 @@ import React from "react";
 import ServiceProviderForm from "./ServiceProviderForm";
 import NewWork from "./NewWork";
 import AdminServices from "./AdminServices";
+import AddTopProject from "./AddTopProject";
 
 const AdminDashboard = () => {
   const storedUser = localStorage.getItem("user");
@@ -20,6 +21,7 @@ const AdminDashboard = () => {
      {user?._id && <NewWork/>} {/* Only for logged-in service providers */}
       <AdminServices token={token} />
       <ServiceProviderForm />
+      <AddTopProject/>
     </div>
   );
 };

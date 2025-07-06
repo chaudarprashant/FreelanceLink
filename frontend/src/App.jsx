@@ -13,8 +13,36 @@ import Home from './Home';
 import NewWorks from './pages/Admin/NewWork';
 
 const App = () => {
+  const backgroundStyle = {
+        position: "fixed",
+        top: 0,
+        left: 0,
+        width: "100vw",
+        height: "100vh",
+        background: "linear-gradient(135deg, #ffffff, #96d2f0)",
+        zIndex: 0,
+        overflow: "hidden",
+    };
+
+    const overlayStyle = {
+        position: "fixed",
+        inset: 0,
+        background: "radial-gradient(circle at top left, rgba(0, 123, 255, 0.08), transparent), radial-gradient(circle at bottom right, rgba(0, 191, 255, 0.08), transparent)",
+        zIndex: 0,
+        pointerEvents: "none"
+    };
+
+    const contentWrapperStyle = {
+        position: "relative",
+        zIndex: 1,
+        minHeight: "100vh",
+    };
+
   return (
     <BrowserRouter>
+      <div style={backgroundStyle}></div>
+            <div style={overlayStyle}></div>
+            <div style={contentWrapperStyle}>
     <Routes>
     <Route path="/home" element={<HomePage/>} />
      <Route path="/" element={<Home/>} />
@@ -30,6 +58,7 @@ const App = () => {
 
 
     </Routes>
+      </div>
     </BrowserRouter>
   )
 }
