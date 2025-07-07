@@ -26,7 +26,9 @@ const [showPaymentPanel, setShowPaymentPanel] = useState(false);
   useEffect(() => {
     const fetchProvider = async () => {
       try {
-        const res = await axios.get(`/api/service-provider/service-provider/${id}`);
+        // const res = await axios.get(`/api/service-provider/service-provider/${id}`);
+        const res = await axios.get(`${import.meta.env.VITE_BACKEND_URL}/api/service-provider/service-provider/${id}`);
+
         console.log("Fetched provider data:", res.data); 
         setProvider(res.data);
          console.log("Fetched provider ID:", res.data._id);

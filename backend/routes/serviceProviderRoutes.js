@@ -152,6 +152,7 @@ router.get("/filter", async (req, res) => {
 // GET /api/service-provider/:id
 router.get("/service-provider/:id", async (req, res) => {
   const providerId = req.params.id;
+   console.log("📥 Request for provider ID:", providerId);
   try {
     const provider = await ServiceProvider.findById(providerId).populate("userId", "name email");
     if (!provider) return res.status(404).json({ error: "Not found" });
