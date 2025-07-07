@@ -26,9 +26,15 @@ app.use(express.json());
 //   ],
 //   credentials: true
 // }));
+// app.use(cors({
+//   origin: "*"
+// }));
 app.use(cors({
-  origin: "*"
+  origin: "https://freelancelink.onrender.com",
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  credentials: true
 }));
+
 
 
 app.use((req, res, next) => {
