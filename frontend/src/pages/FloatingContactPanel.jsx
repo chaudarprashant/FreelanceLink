@@ -39,9 +39,12 @@ const FloatingContactPanel = ({ onClose, phone, serviceProviderId, userId }) => 
 
     try {
     
-      await axios.post("/api/quotes/create", formData, {
+      // await axios.post("/api/quotes/create", formData, {
+      //   headers: { "Content-Type": "multipart/form-data" },
+      // });
+      await axios.post(`${import.meta.env.VITE_BACKEND_URL}/api/quotes/create`, formData, {
         headers: { "Content-Type": "multipart/form-data" },
-      });
+       });
       alert("Quote submitted successfully!");
       setView("main");
       setProjectName("");
