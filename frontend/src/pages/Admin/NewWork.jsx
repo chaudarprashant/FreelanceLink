@@ -12,7 +12,8 @@ const NewWorks = () => {
     const fetchQuotes = async () => {
       if (!serviceProvider?._id) return;
       try {
-        const res = await axios.get(`/api/quotes/by-provider/${serviceProvider._id}`);
+        // const res = await axios.get(`/api/quotes/by-provider/${serviceProvider._id}`);
+        const res = await axios.get(`${import.meta.env.VITE_BACKEND_URL}/api/quotes/by-provider/${serviceProvider._id}`);
         //console.log("Service provider ID in localStorage:", serviceProvider?._id);
         setQuotes(res.data);
       } catch (err) {
@@ -48,7 +49,8 @@ const NewWorks = () => {
                 {quote.files.map((file, idx) => (
                   <li key={idx}>
                     <a
-                      href={`http://localhost:5173${file.url}`} // ✅ Corrected path
+                      // href={`http://localhost:5173${file.url}`} // ✅ Corrected path
+                      href={`${import.meta.env.VITE_BACKEND_URL}${file.url}`}
                       target="_blank"
                       rel="noreferrer"
                     >
