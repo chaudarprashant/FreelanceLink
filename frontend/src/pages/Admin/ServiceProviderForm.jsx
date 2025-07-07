@@ -194,7 +194,7 @@ const ServiceProviderForm = () => {
     }
 
     axios
-      .get(`${process.env.REACT_APP_BACKEND_URL}/api/auth/me`, { headers: { Authorization: token } })
+      .get(`${import.meta.env.VITE_BACKEND_URL}/api/auth/me`, { headers: { Authorization: token } })
       .then((res) => setUser(res.data))
       .catch((err) => {
         console.error("Error fetching user", err);
@@ -202,7 +202,7 @@ const ServiceProviderForm = () => {
       });
 
     axios
-  .get(`${process.env.REACT_APP_BACKEND_URL}/api/service-provider`, { headers: { Authorization: token } })
+  .get(`${import.meta.env.VITE_BACKEND_URL}/api/service-provider`, { headers: { Authorization: token } })
   .then((res) => {
     if (res.data) {
       const fetchedData = res.data;
@@ -274,7 +274,7 @@ const ServiceProviderForm = () => {
 
     try {
       const res = await axios.post(
-        `${process.env.REACT_APP_BACKEND_URL}/api/service-provider`,
+        `${import.meta.env.VITE_BACKEND_URL}/api/service-provider`,
         { ...formData, userId: user._id },
         { headers: { Authorization: token } }
       );

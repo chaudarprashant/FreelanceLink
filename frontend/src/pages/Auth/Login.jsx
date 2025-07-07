@@ -15,7 +15,7 @@ function Login() {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const { data } = await axios.post( `${process.env.REACT_APP_BACKEND_URL}/api/auth/login`, form);
+            const { data } = await axios.post( `${import.meta.env.VITE_BACKEND_URL}/api/auth/login`, form);
             localStorage.setItem("token", data.token);
             localStorage.setItem("role", data.role);
             console.log("User object:", data.user);

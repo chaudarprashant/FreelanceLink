@@ -8,7 +8,7 @@ const AdminServices = ({ token }) => {
   useEffect(() => {
     const fetchServices = async () => {
       try {
-        const response = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/api/service-provider`, {
+        const response = await axios.get(`${import.meta.env.VITE_BACKEND_URL}/api/service-provider`, {
           headers: { Authorization: token },
         });
 
