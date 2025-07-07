@@ -14,9 +14,10 @@ function SignUp() {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        console.log("API BASE URL:", process.env.REACT_APP_BACKEND_URL); 
+      console.log("API BASE URL:", import.meta.env.VITE_BACKEND_URL);
+
         try {
-            await axios.post(`${process.env.REACT_APP_BACKEND_URL}/api/auth/signup`, form);
+            await axios.post(`${import.meta.env.VITE_BACKEND_URL}/api/auth/signup`, form);
             alert("Signup successful!");
             navigate("/login");
         } catch (err) {
