@@ -131,10 +131,4 @@ This project is licensed under the [MIT License](LICENSE).
 📩 Email: [prashantchaudar666@gmail.com](mailto:prashantchaudar666@gmail.com)
 🌐 Portfolio: *\[https://portfolio-vn3f.onrender.com]*
 
-```
 
----
-
-If you want, I can **add GitHub profile badges, workflow status icons, and visual tech stack logos** so your README looks *premium* like top open-source projects.  
-Do you want me to make that version next?
-```
