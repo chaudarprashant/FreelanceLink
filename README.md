@@ -129,6 +129,6 @@ This project is licensed under the [MIT License](LICENSE).
 
 **Prashant Chaudhar**
 📩 Email: [prashantchaudar666@gmail.com](mailto:prashantchaudar666@gmail.com)
-🌐 Portfolio: *\[https://portfolio-vn3f.onrender.com]*
+🌐 Portfolio: https://portfolio-vn3f.onrender.com
 
 
